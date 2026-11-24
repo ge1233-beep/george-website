@@ -145,6 +145,7 @@
   var lbCount = document.getElementById("lightboxCount");
   var lbPrev = document.getElementById("lightboxPrev");
   var lbNext = document.getElementById("lightboxNext");
+  var lbDetail = document.getElementById("lightboxDetail");
   var lbImages = [];
   var lbCaptions = [];
   var lbIndex = 0;
@@ -162,6 +163,27 @@
     lbCaptions = (card.getAttribute("data-caption") || "").split("|");
     if (!lbImages.length) return;
     lbShow(0);
+    if (lbDetail) {
+      lbDetail.innerHTML = "";
+      var problem = card.getAttribute("data-problem") || "";
+      var solution = card.getAttribute("data-solution") || "";
+      if (problem) {
+        var pp = document.createElement("p");
+        var ps = document.createElement("strong");
+        ps.textContent = "The problem: ";
+        pp.appendChild(ps);
+        pp.appendChild(document.createTextNode(problem));
+        lbDetail.appendChild(pp);
+      }
+      if (solution) {
+        var sp = document.createElement("p");
+        var ss = document.createElement("strong");
+        ss.textContent = "How it works: ";
+        sp.appendChild(ss);
+        sp.appendChild(document.createTextNode(solution));
+        lbDetail.appendChild(sp);
+      }
+    }
     lightbox.classList.add("open");
     lightbox.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
