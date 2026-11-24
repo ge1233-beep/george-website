@@ -423,7 +423,7 @@ h2 { font-size: clamp(34px, 5vw, 56px); text-transform: uppercase; }
    Hidden only when JavaScript is running (html.js). No JS, or a failed
    script, means everything stays visible. */
 html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.reveal.visible { opacity: 1; transform: none; }
+html.js .reveal.visible { opacity: 1; transform: none; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
