@@ -105,31 +105,35 @@
 
       <div class="cards-4">
         <article class="card reveal">
-          <div class="card-icon">&#128269;</div>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></div>
           <h3>Lead Research</h3>
           <p>I find the businesses and people who actually need what you sell: owners and
             decision-makers, not random names from a database.</p>
+          <a class="card-wf" href="#wf-research-engine">n8n: the Research Engine scores every website for fit &rarr;</a>
           <span class="card-link">Find your market &rarr;</span>
         </article>
         <article class="card reveal">
-          <div class="card-icon">&#9776;</div>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1.2" fill="currentColor" stroke="none"/></svg></div>
           <h3>List Building</h3>
           <p>Clean, organized lead lists built for your market and your offer, ready for your
             sales team or your CRM.</p>
+          <a class="card-wf" href="#wf-lead-intake">n8n: new leads are cleaned and deduped automatically &rarr;</a>
           <span class="card-link">Build your list &rarr;</span>
         </article>
         <article class="card reveal">
-          <div class="card-icon">&#10003;</div>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-3.6 8-10V5.2L12 2 4 5.2V12c0 6.4 8 10 8 10z"/><path d="M8.7 11.6l2.3 2.3 4.3-4.6"/></svg></div>
           <h3>Enrichment &amp; Verification</h3>
           <p>Every email and phone checked by hand. No dead contacts, no guesses, no bounced
             emails wasting your time.</p>
+          <a class="card-wf" href="#wf-email-bounce">n8n: bounced emails are retried automatically &rarr;</a>
           <span class="card-link">Verify your data &rarr;</span>
         </article>
         <article class="card reveal">
-          <div class="card-icon">&#127760;</div>
+          <div class="card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><line x1="3" y1="12" x2="21" y2="12"/></svg></div>
           <h3>SEO &amp; Website Management</h3>
           <p>WordPress sites, on-page and technical SEO, and content that brings in traffic.
             Real Search Console results, not theory.</p>
+          <a class="card-wf" href="#wf-lead-intake">n8n: website leads are captured and followed up automatically &rarr;</a>
           <span class="card-link">Grow your website &rarr;</span>
         </article>
       </div>
@@ -141,6 +145,7 @@
           <p>Research, enrichment, follow-up, and delivery: automated where it should be,
             checked by a human where it matters. Less manual work for you, more real leads
             in your pipeline, every week.</p>
+          <a class="banner-link" href="#workflows">See the 8 workflows I built &rarr;</a>
         </div>
         <div class="automation-points">
           <span>Automated lead collection</span>
@@ -169,24 +174,28 @@
           <h3>Find</h3>
           <p>I research your market and find the businesses that fit your offer, then find
             the owner or decision-maker inside each one.</p>
+          <a class="step-auto" href="#wf-research-engine">n8n: the Research Engine scores websites for fit &rarr;</a>
         </article>
         <article class="step reveal">
           <span class="step-num">02</span>
           <h3>Verify</h3>
           <p>I check every contact: is this the right person, is the email real, is the
             business still open? Bad contacts never reach your list.</p>
+          <a class="step-auto" href="#wf-email-bounce">n8n: bounced emails are retried automatically &rarr;</a>
         </article>
         <article class="step reveal">
           <span class="step-num">03</span>
           <h3>Enrich</h3>
           <p>I add what your sales team needs: work email, phone, LinkedIn, company size,
             and the buying signal that shows they are ready.</p>
+          <a class="step-auto" href="#wf-lead-intake">n8n: new leads are cleaned and deduped first &rarr;</a>
         </article>
         <article class="step reveal">
           <span class="step-num">04</span>
           <h3>Automate &amp; Deliver</h3>
           <p>n8n and AI handle the repetitive work, I check the results, and you get a clean,
             verified list on time, every time.</p>
+          <a class="step-auto" href="#workflows">See the 8 workflows &rarr;</a>
         </article>
       </div>
     </div>
@@ -314,7 +323,7 @@
       </div>
 
       <div class="cards-3">
-        <article class="case wf reveal" data-proof="assets/proof-n8n-email-bounce.png" data-caption="Email Sender and Bounce Fixer — n8n workflow, 40 nodes" data-problem="Sending bulk cold email by hand takes hours, and when an email bounces you lose the lead. You never know which addresses are truly dead and which just need a different spelling." data-solution="It reads leads from a Google Sheet and sends them in batches through 4 Gmail accounts, 20 seconds apart, marking each lead Sent. Every 30 minutes it scans all 4 inboxes for bounce notices. When an address bounces, it tries the next email pattern — first.last, firstlast, f.last, first.l, last.first — and resends. If every pattern bounces, the lead is marked Needs Manual Review so a human can check it. Nothing is lost silently.">
+        <article class="case wf reveal" id="wf-email-bounce" data-proof="assets/proof-n8n-email-bounce.png" data-caption="Email Sender and Bounce Fixer — n8n workflow, 40 nodes" data-problem="Sending bulk cold email by hand takes hours, and when an email bounces you lose the lead. You never know which addresses are truly dead and which just need a different spelling." data-solution="It reads leads from a Google Sheet and sends them in batches through 4 Gmail accounts, 20 seconds apart, marking each lead Sent. Every 30 minutes it scans all 4 inboxes for bounce notices. When an address bounces, it tries the next email pattern — first.last, firstlast, f.last, first.l, last.first — and resends. If every pattern bounces, the lead is marked Needs Manual Review so a human can check it. Nothing is lost silently.">
           <img class="wf-shot" src="assets/proof-n8n-email-bounce.png" alt="Email Sender and Bounce Fixer n8n workflow">
           <span class="case-num">01</span>
           <h3>Email Sender + Bounce Fixer</h3>
@@ -322,7 +331,7 @@
           <p class="wf-summary">Bulk email that fixes its own bounces, so no lead is lost to a bad address.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-chatbot.png" data-caption="Gadget Store Chatbot — n8n workflow, 54 nodes" data-problem="A gadget store gets the same customer questions on Messenger all day — is this in stock, how much, do you deliver — and answering them by hand eats the whole day. A chatbot that guesses will invent prices and stock that do not exist." data-solution="When a customer messages the store on Facebook Messenger, the workflow checks the message is real, looks up the customer, and an AI agent answers using only the store's approved knowledge base and live product and stock list. It remembers the conversation, hands tricky cases to a staff member, notifies staff, and replies in Messenger. A daily cleanup keeps the data tidy.">
+        <article class="case wf reveal" id="wf-chatbot" data-proof="assets/proof-n8n-chatbot.png" data-caption="Gadget Store Chatbot — n8n workflow, 54 nodes" data-problem="A gadget store gets the same customer questions on Messenger all day — is this in stock, how much, do you deliver — and answering them by hand eats the whole day. A chatbot that guesses will invent prices and stock that do not exist." data-solution="When a customer messages the store on Facebook Messenger, the workflow checks the message is real, looks up the customer, and an AI agent answers using only the store's approved knowledge base and live product and stock list. It remembers the conversation, hands tricky cases to a staff member, notifies staff, and replies in Messenger. A daily cleanup keeps the data tidy.">
           <img class="wf-shot" src="assets/proof-n8n-chatbot.png" alt="Gadget Store Chatbot n8n workflow">
           <span class="case-num">02</span>
           <h3>Gadget Store Chatbot</h3>
@@ -330,7 +339,7 @@
           <p class="wf-summary">An AI chatbot that answers customers on Messenger using the store's real stock, not guesses.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-job-qualifier.png" data-caption="Job Applicants Qualifier — n8n workflow, 41 nodes" data-problem="Finding a job means checking job boards every day, reading dozens of posts, and writing a new application email for each one. It is slow, repetitive, and easy to miss a good posting." data-solution="Every morning at 9 AM it reads job RSS feeds, filters out old or irrelevant posts, and removes jobs it already saw. For each new matching job, an AI agent drafts a tailored application email. If auto-send is on, it downloads the resume from Google Drive and emails the application, then logs what was sent. A second daily pass sends any approved drafts that are still waiting.">
+        <article class="case wf reveal" id="wf-job-qualifier" data-proof="assets/proof-n8n-job-qualifier.png" data-caption="Job Applicants Qualifier — n8n workflow, 41 nodes" data-problem="Finding a job means checking job boards every day, reading dozens of posts, and writing a new application email for each one. It is slow, repetitive, and easy to miss a good posting." data-solution="Every morning at 9 AM it reads job RSS feeds, filters out old or irrelevant posts, and removes jobs it already saw. For each new matching job, an AI agent drafts a tailored application email. If auto-send is on, it downloads the resume from Google Drive and emails the application, then logs what was sent. A second daily pass sends any approved drafts that are still waiting.">
           <img class="wf-shot" src="assets/proof-n8n-job-qualifier.png" alt="Job Applicants Qualifier n8n workflow">
           <span class="case-num">03</span>
           <h3>Job Applicants Qualifier</h3>
@@ -338,7 +347,7 @@
           <p class="wf-summary">Finds new matching jobs every morning and drafts the application email for each one.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-remote-jobs.png" data-caption="Remote Jobs to Facebook Page — n8n workflow, 18 nodes — live and running" data-problem="A Facebook Page about remote jobs goes stale fast. Someone has to find fresh jobs, write the posts, and publish them every day — and it is easy to post the same job twice." data-solution="Once a day it gathers remote jobs from 4 sources — We Work Remotely, Remotive, Jobicy, and Remote OK — keeps only jobs posted in the last 24 hours that are relevant and complete, and skips any job already in the list. Then, every 10 minutes, it posts the next queued job to the Facebook Page with a caption and an auto-comment, and marks it posted. This one is live and running.">
+        <article class="case wf reveal" id="wf-remote-jobs" data-proof="assets/proof-n8n-remote-jobs.png" data-caption="Remote Jobs to Facebook Page — n8n workflow, 18 nodes — live and running" data-problem="A Facebook Page about remote jobs goes stale fast. Someone has to find fresh jobs, write the posts, and publish them every day — and it is easy to post the same job twice." data-solution="Once a day it gathers remote jobs from 4 sources — We Work Remotely, Remotive, Jobicy, and Remote OK — keeps only jobs posted in the last 24 hours that are relevant and complete, and skips any job already in the list. Then, every 10 minutes, it posts the next queued job to the Facebook Page with a caption and an auto-comment, and marks it posted. This one is live and running.">
           <img class="wf-shot" src="assets/proof-n8n-remote-jobs.png" alt="Remote Jobs to Facebook Page n8n workflow">
           <span class="case-num">04</span>
           <h3>Remote Jobs &rarr; Facebook Page</h3>
@@ -346,7 +355,7 @@
           <p class="wf-summary">Collects fresh remote jobs every day and posts them to a Facebook Page by itself. No duplicates.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-research-engine.png" data-caption="Website Lead Research Engine — n8n workflow, 17 nodes" data-problem="Judging whether a company is a good lead means opening their website, reading it, and deciding by hand. That is slow when you have hundreds of companies in a sheet." data-solution="It reads company websites from a Google Sheet, opens each site in a headless browser, pulls out the useful signals, and scores how good a fit each company is. It can add a short AI summary, then writes the score and findings back to the sheet and labels the lead Ready for Human Review. It never sends any email or message — a human decides what happens next.">
+        <article class="case wf reveal" id="wf-research-engine" data-proof="assets/proof-n8n-research-engine.png" data-caption="Website Lead Research Engine — n8n workflow, 17 nodes" data-problem="Judging whether a company is a good lead means opening their website, reading it, and deciding by hand. That is slow when you have hundreds of companies in a sheet." data-solution="It reads company websites from a Google Sheet, opens each site in a headless browser, pulls out the useful signals, and scores how good a fit each company is. It can add a short AI summary, then writes the score and findings back to the sheet and labels the lead Ready for Human Review. It never sends any email or message — a human decides what happens next.">
           <img class="wf-shot" src="assets/proof-n8n-research-engine.png" alt="Website Lead Research Engine n8n workflow">
           <span class="case-num">05</span>
           <h3>Website Lead Research Engine</h3>
@@ -354,7 +363,7 @@
           <p class="wf-summary">Opens company websites, checks if they are a good fit, and scores them into a sheet.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-lead-intake.png" data-caption="Lead Intake, Qualification, Duplicate Check and Follow-Up Draft — n8n workflow, 28 nodes" data-problem="Leads come in from forms and other tools, and three things go wrong: the same lead gets entered twice, bad leads with missing details clog the list, and good leads sit with no follow-up because nobody wrote the email yet." data-solution="When a lead arrives — from a form, a webhook, or a manual test — it cleans up the details, checks the required fields are filled in, and searches the Leads sheet by email to see if this lead already exists. It scores and qualifies the lead, saves it to the sheet, writes the follow-up email as a Gmail draft (it does not send it — a human sends it), and alerts the owner on Telegram. Invalid leads are marked invalid and duplicates are flagged for review.">
+        <article class="case wf reveal" id="wf-lead-intake" data-proof="assets/proof-n8n-lead-intake.png" data-caption="Lead Intake, Qualification, Duplicate Check and Follow-Up Draft — n8n workflow, 28 nodes" data-problem="Leads come in from forms and other tools, and three things go wrong: the same lead gets entered twice, bad leads with missing details clog the list, and good leads sit with no follow-up because nobody wrote the email yet." data-solution="When a lead arrives — from a form, a webhook, or a manual test — it cleans up the details, checks the required fields are filled in, and searches the Leads sheet by email to see if this lead already exists. It scores and qualifies the lead, saves it to the sheet, writes the follow-up email as a Gmail draft (it does not send it — a human sends it), and alerts the owner on Telegram. Invalid leads are marked invalid and duplicates are flagged for review.">
           <img class="wf-shot" src="assets/proof-n8n-lead-intake.png" alt="Lead Intake, Qualification, Duplicate Check and Follow-Up Draft n8n workflow">
           <span class="case-num">06</span>
           <h3>Lead Intake + Follow-Up Draft</h3>
@@ -362,7 +371,7 @@
           <p class="wf-summary">Every new lead gets cleaned, checked for duplicates, scored, saved, and a follow-up email written.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-brief-generator.png" data-caption="AI-Assisted Company Research Brief Generator — n8n workflow, 21 nodes" data-problem="Writing a research brief before outreach means reading a company's whole website by hand, which is slow. Asking an AI to do it alone risks invented facts ending up in the brief." data-solution="Someone submits a company name and website in a form. The workflow checks the website is valid, reads the homepage and up to 5 relevant pages, combines what it found, and an AI agent writes a research brief as structured data — using only what it actually read, without inventing facts. A human reviews the brief first before it is saved to Google Sheets.">
+        <article class="case wf reveal" id="wf-brief-generator" data-proof="assets/proof-n8n-brief-generator.png" data-caption="AI-Assisted Company Research Brief Generator — n8n workflow, 21 nodes" data-problem="Writing a research brief before outreach means reading a company's whole website by hand, which is slow. Asking an AI to do it alone risks invented facts ending up in the brief." data-solution="Someone submits a company name and website in a form. The workflow checks the website is valid, reads the homepage and up to 5 relevant pages, combines what it found, and an AI agent writes a research brief as structured data — using only what it actually read, without inventing facts. A human reviews the brief first before it is saved to Google Sheets.">
           <img class="wf-shot" src="assets/proof-n8n-brief-generator.png" alt="AI-Assisted Company Research Brief Generator n8n workflow">
           <span class="case-num">07</span>
           <h3>Company Research Brief Generator</h3>
@@ -370,7 +379,7 @@
           <p class="wf-summary">Reads a company's website and writes a research brief for outreach — checked by a human first.</p>
           <span class="proof-hint"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg> View workflow</span>
         </article>
-        <article class="case wf reveal" data-proof="assets/proof-n8n-hvac.png" data-caption="Standalone HVAC Lead and Follow-Up Automation — n8n workflow, 55 nodes" data-problem="An HVAC business loses money three ways: new leads wait hours for a reply, quotes go out and nobody chases them, and past customers are never reminded when maintenance is due, so repeat jobs never happen." data-solution="When a lead comes in from the website form or by email, it cleans and scores the lead, saves it, replies instantly by SMS with a booking link, and alerts the owner on Telegram — with an extra alert for hot leads. When a quote is sent, it automatically chases it by SMS on days 1, 3, 7 and 30, unless the lead replies or asks to stop. When a job is finished, it works out the next maintenance date, and a daily check sends maintenance-due or win-back SMS messages.">
+        <article class="case wf reveal" id="wf-hvac" data-proof="assets/proof-n8n-hvac.png" data-caption="Standalone HVAC Lead and Follow-Up Automation — n8n workflow, 55 nodes" data-problem="An HVAC business loses money three ways: new leads wait hours for a reply, quotes go out and nobody chases them, and past customers are never reminded when maintenance is due, so repeat jobs never happen." data-solution="When a lead comes in from the website form or by email, it cleans and scores the lead, saves it, replies instantly by SMS with a booking link, and alerts the owner on Telegram — with an extra alert for hot leads. When a quote is sent, it automatically chases it by SMS on days 1, 3, 7 and 30, unless the lead replies or asks to stop. When a job is finished, it works out the next maintenance date, and a daily check sends maintenance-due or win-back SMS messages.">
           <img class="wf-shot" src="assets/proof-n8n-hvac.png" alt="Standalone HVAC Lead and Follow-Up Automation n8n workflow">
           <span class="case-num">08</span>
           <h3>HVAC Lead + Follow-Up Automation</h3>

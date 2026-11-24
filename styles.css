@@ -247,11 +247,27 @@ h2 { font-size: clamp(34px, 5vw, 56px); text-transform: uppercase; }
   display: grid; place-items: center;
   background: var(--green-soft);
   border-radius: 12px;
-  font-size: 22px;
 }
+.card-icon svg { width: 24px; height: 24px; color: var(--green-dark); }
 .card h3 { font-size: 19px; line-height: 1.25; }
 .card p { font-size: 14.5px; color: var(--muted); flex: 1; }
 .card-link { font-size: 13.5px; font-weight: 700; color: var(--green-dark); }
+.card-wf { display: block; margin-top: 4px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 600; line-height: 1.45; color: var(--green-dark); }
+.card-wf:hover { text-decoration: underline; }
+
+/* Pipeline connector between the 4 service cards and the 4 method steps */
+.cards-4 .card, .steps .step { position: relative; }
+.cards-4 .card:not(:last-child)::after,
+.steps .step:not(:last-child)::after {
+  content: "\203A";
+  position: absolute;
+  right: -15px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  font-size: 24px; font-weight: 700;
+  color: var(--green-dark);
+  pointer-events: none;
+}
 
 .automation-banner {
   margin-top: 18px;
@@ -266,6 +282,8 @@ h2 { font-size: clamp(34px, 5vw, 56px); text-transform: uppercase; }
 }
 .automation-text h3 { font-size: clamp(22px, 3vw, 30px); margin: 8px 0 12px; }
 .automation-text p { color: #c9c9c4; font-size: 15px; }
+.banner-link { display: inline-block; margin-top: 18px; padding: 11px 20px; border: 1px solid rgba(163, 230, 53, 0.55); border-radius: 999px; color: #d9f99d; font-size: 14px; font-weight: 700; }
+.banner-link:hover { background: rgba(163, 230, 53, 0.14); }
 .automation-points { display: grid; gap: 10px; }
 .automation-points span {
   background: rgba(163, 230, 53, 0.12);
@@ -299,6 +317,8 @@ h2 { font-size: clamp(34px, 5vw, 56px); text-transform: uppercase; }
 }
 .step h3 { font-size: 20px; margin: 14px 0 8px; }
 .step p { font-size: 14.5px; color: var(--muted); }
+.step-auto { display: block; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 600; line-height: 1.45; color: var(--green-dark); }
+.step-auto:hover { text-decoration: underline; }
 
 /* ---------- Results ---------- */
 .cards-3 {
@@ -430,6 +450,7 @@ html.js .reveal.visible { opacity: 1; transform: none; }
   .hero-grid { grid-template-columns: 1fr; gap: 44px; }
   .photo-frame { width: min(340px, 88%); }
   .cards-4, .steps { grid-template-columns: repeat(2, 1fr); }
+  .cards-4 .card:not(:last-child)::after, .steps .step:not(:last-child)::after { display: none; }
   .cards-3, .timeline { grid-template-columns: repeat(2, 1fr); }
   .results-strip { grid-template-columns: repeat(2, 1fr); }
   .automation-banner, .contact-grid { grid-template-columns: 1fr; }
